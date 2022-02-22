@@ -12,7 +12,6 @@ logoutButton.addEventListener('click', () => {
 async function displayFamilies() {
     // fetch families from supabase
     const families = await getFamilies();
-    console.log(families);
     // clear out the familiesEl
     familiesEl.textContent = '';
     for (let family of families) {
@@ -33,7 +32,6 @@ async function displayFamilies() {
         divBunnies.classList.add('bunnies');
 
         const bunnies = family.fuzzy_bunnies;
-        console.log('fuzzy bunnies are', bunnies);
         // add the bunnies css class to the bunnies el, and family css class to the family el
         // put the family name in the name element
         // for each of this family's bunnies
